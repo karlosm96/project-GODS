@@ -13,13 +13,21 @@
 <body>
 	<header class="top-menu">
 		<a href="index.html"><img class="img-logo" src="img/logo.png"></a>
-		<div class="div-top-menu">
-			<a class="top-link" href="" name="inicio">Home </a>
-			<a class="top-link" href="">Acerca de </a>
-			<a class="top-link" href="pages/contacto.html">Contacto </a>
-			<a class="top-link" href="pages/sesion.html">Iniciar Sesión </a>
+		<div class="items-top-menu">
+			<div class="hamburguer-menu-container">
+				<img src="img/ico/menu.png">
+			</div>
+			<ul class="ul-top-menu">
+				<li class="li-top-menu"><a class="top-link" href="" name="inicio">Home </a></li>
+				<li class="li-top-menu"><a class="top-link" href="">Acerca de </a></li>
+				<li class="li-top-menu"><a class="top-link" href="pages/contacto.html">Contacto </a></li>
+				<li class="li-top-menu"><a class="top-link" href="pages/sesion.html">Iniciar Sesión </a></li>
+			</ul>
 		</div>
 	</header>
+	<!--Script for burguer menu animation-->
+	<script src="app.js"></script>
+
 	<div class="top-image">
 		<img class="center-img" src="">
 	</div>
@@ -28,7 +36,7 @@
 			<li class="li-link li-1"><div id="link1" class="menu-link"><a class="mid-link" href="pages/jobs.html" target="_blank">Jobs</a></div></li>
 			<li class="li-link li-2"><div id="link2" class="menu-link"><a class="mid-link" href="">Farmeo</a></div></li>
 			<li class="li-link li-3"><div id="link3" class="menu-link"><a class="mid-link" href="">Instancias</a></div></li>
-			<li class="li-link li-4"><div id="link4" class="menu-link"><a class="mid-link" href="">Novedades</a></div></li>
+			<li class="li-link li-4"><div id="link4" class="menu-link"><a class="mid-link" href="#news-title">Novedades</a></div></li>
 			<!--<li>Endless Tower</li>
 				<li>Thanatos Tower</li>
 				<li>Oracle</li>
@@ -38,37 +46,84 @@
 		</ul>
 	</nav>
 
-	<!--<div>
-		<img src="https://123emoji.com/wp-content/uploads/2016/08/Ragnarok-Stickers-22380.png">
-	</div>-->
+	</div>
+	<div class="prototype-slider">
+		<img id="slidImg" class="image-slider" src="img/image_slide_2.png">
+		<video id="Slider" class="vid-1" loop muted autoplay>
+			<source src="vid/video1.mp4" type="video/mp4">
+		</video>
+		<ul class="slider-vids">
+			<li onclick="videoUrl('vid/video2.mp4'); imgUrl('img/image_slide_1.jpg')"><video src="vid/video2.mp4" type="video/mp4" loop muted autoplay></video></li>
+			<li onclick="videoUrl('vid/video1.mp4'); imgUrl('img/image_slide_2.png')"><video src="vid/video1.mp4" type="video/mp4" loop muted autoplay></video></li>
+			<li onclick="videoUrl('vid/video3.mp4'); imgUrl('img/image3_3.jpg')"><video src="vid/video3.mp4" type="video/mp4" loop muted autoplay></video></li>
+		</ul>
+	</div>
 
-	<!--<div class="presentation">
-		<p>En Gods Online encontraras una serie de informacion util acerca del juego Ragnarok Online Mobile, que tiene como finalidad ayudar a viejos y nuevos jugadores.
-			Encontraran guias y consejos que faciliten la compresion de todo el contenido que nos da este MMORPG. Bienvenidos!!! 
-			<img class="presentation-image" src="https://123emoji.com/wp-content/uploads/2016/08/Ragnarok-Stickers-22370.png" height="100" width="100">
-		</p>-->
-	</div>
-	<div class="prototype-vid">
-		<video class="vid-1" src="vid/119970178_250013313643850_5657536196844799069_n.mp4" loop muted autoplay></video>
-	</div>
-	<div class¨="container-vid">
+	<!--switch the back image and the presentation videos-->
+	<script src="slider.js" type="text/javascript">	</script>
+	
+	<!--Prototype animation
+
+	<div class¨="container-vid"></div>
 		<video class="index-vid" src="vid/119970178_250013313643850_5657536196844799069_n.mp4"  loop muted autoplay></video>
-		<div class="center">	
-			<div class="circle1"></div>
-			<div class="circle2"></div>
-			<div class="circle3"></div>
+			<div class="center">	
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+			</div>
+	</div> -->
+	
+	<div class="intersection"></div>
+	<!--News Cards-->
+	<aside class="grid-content">
+		<h2 class="news-title" ID="news-title">Novedades</h2>
+		<div class="news-content">
+			<div class="news-items"><iframe width="560" height="315" src="https://www.youtube.com/embed/0faIqOisMhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe></div>
+			<div class="news-items">
+				<img src="img/new_runes_opt.jpg" data-original="new_runes.jpeg" alt="New 4th job runes">
+				<div class="news-information">
+					<h3 class="card-tittle">New Runes</h3>
+					<p>Estas seran la proximas runas de 4to job con respectivos efectos.</p>
+				</div>
+			</div>
+			<div class="news-items">
+				<img src="img/new_yellow_gatcha_opt.jpg" data-original="new_yellow_gatcha.jpeg" alt="New items Yellow Gatcha machine">
+				<div class="news-information">
+					<h3 class="card-tittle">New Yellow Gatcha Items</h3>
+					<p>Estas seran la proximas runas de 4to job con respectivos efectos.</p>
+				</div>
+			</div>
+			<div class="news-items">
+				<img src="img/new_red_gatcha_opt.jpg" data-original="new_red_gatcha.jpeg" alt="New items Red Gatcha machine">
+				<div class="news-information">
+					<h3 class="card-tittle">New Red Gatcha Items</h3>
+					<p>Estas seran la proximas runas de 4to job con respectivos efectos.</p>
+				</div>
+			</div>	
+			<div class="news-items">
+				<img src="img/new_runes_opt.jpg" data-original="new_runes.jpeg" alt="New 4th job runes">
+				<div class="news-information">
+					<h3 class="card-tittle">New Runes 4</h3>
+					<p>Estas seran la proximas runas de 4to job con respectivos efectos.</p>
+				</div>
+			</div>
 		</div>
-	</div>
-
-	<aside class="new-content">
-		<div class="news">
-			<h2>Novedades</h2>
+		<!--modal for popup full screen image-->
+		<div class="modal">
+			<img class="full-modal-img" src="" alt="">
+			<p class="caption"></p>
 		</div>
-		<div class="poring-world">
-			<h3>Semanales</h3>
-			<iframe src="https://www.poring.world/" frameborder="0"></iframe>
-		</div>
+		<script src="popapp.js"></script>
 	</aside>
+	
+	
+	<div class="intersection"></div>
+	
+	<div class="poring-world">
+		<h3>Semanales</h3>
+		<!--<iframe src="https://www.poring.world/" frameborder="0"></iframe>-->
+	</div>
+	
 
 	<div>
         <footer>

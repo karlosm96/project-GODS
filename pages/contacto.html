@@ -5,25 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="../img/ico/poring-png-1.ico" sizes="64x64" sizes="32x32">
+    <link rel="STYLESHEET" href="../contactosstyle.css">
     <title>Gods Contacto</title>
 </head>
 <body>
-    <h1>Contactanos</h1>
-    <div>
-        <form action="a" method="GET">
-            Nombre <input type="text" name="nick" value=" Nick in game">
-            <br><br>
-            Correo Electronico <input type="text" name="email" value="@">
-            <br><br>
-            Job <input type="text" name="job" value=" ¿Que job eres?">
-            <br><br>
-            <textarea name="consulta" id="consulta" cols="30" rows="10">Haz tu consulta</textarea>
-            <br>
-            Deseo ser contactado ingame <input type="checkbox" name="contacto_ingame" checked><input type="submit" value="Submit">  
+    <div class="form">
+        <h2>Contactanos</h2>
+        <form class="contact">
+            <div class="input-contact">
+                 <label>Nombre</label> 
+                <input type="text" name="nick" value=" Nick in game">
+            </div>
+
+            <div class="input-contact">
+                 <label for="">Job</label> 
+                 <input type="text" name="job" value=" ¿Que job eres?">
+            </div>
+
+            <div class="input-contact">
+                <label>Correo Electronico</label>  
+                <input type="text" name="email" value="@">
+            </div>
+                
+            <div class="input-contact">
+                <textarea name="consulta" id="consulta" cols="30" rows="10">Haz tu consulta</textarea>
+            </div>
+                
+            <div class="input-contact">
+                <div class="input-check">
+                    <label>Deseo ser contactado ingame </label>
+                    <input type="checkbox" name="contacto_ingame"> 
+                </div>
+                <input type="submit" value="Submit" name="">    
+            </div>
         </form>
     </div>
+    <!--
     <footer>
         <a href="../index.html">Regresar</a>
-    </footer>
+    </footer>-->
 </body>
 </html>
