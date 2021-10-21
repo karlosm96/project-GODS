@@ -4,6 +4,7 @@ const previews = document.querySelectorAll(".news-content img");
 const originalImages = document.querySelector(".full-modal-img");
 const caption = document.querySelector(".caption");
 
+//Open modal screen *popup*
 previews.forEach((preview) =>{
     preview.addEventListener("click", () =>{
         modal.classList.add("open");

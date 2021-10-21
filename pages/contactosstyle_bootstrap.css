@@ -55,13 +55,15 @@
     border-bottom: 1px solid #e5e5e5;
   }
   
-  .form-row .name {
+  .form-row .name, .clase, .email, .message {
     width: 188px;
     color: #333;
     font-size: 15px;
     font-weight: 700;
     margin-top: 11px;
   }
+
+
   
   .form-row .value {
     width: -webkit-calc(100% - 188px);

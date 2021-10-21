@@ -37,7 +37,7 @@ p{
 
 .items-top-menu{
     display: flex;
-    width:100%;
+    width: 100%;
     justify-content: flex-end;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
@@ -80,9 +80,8 @@ p{
     background-color: #ffffff;
 }
 
-/*Top menu*/
+/*##################### Top menu #####################*/
 .principal-menu{
-    background-color: #131419;
     display: flex;
     height: 40px;  
     width: auto;
@@ -144,7 +143,7 @@ li{
     width: 100%;
 }
 
-/*middle video and background-images slider*/
+/*##################### middle video and background-images slider #####################*/
 .prototype-slider{
     display: flex;
     position: relative;
@@ -283,7 +282,7 @@ div .slider-vids li video .center:hover{
     display: flex;
 }
 
-/*News Cards*/
+/*##################### News Cards #####################*/
 .grid-content{
     width: 100%;
     height: 600px;
@@ -294,14 +293,17 @@ div .slider-vids li video .center:hover{
     overflow: hidden;
 }
 
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 .grid-content .news-title{
     width: 100%; 
     display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
     justify-content: center;
     align-self: center;
-    font-size: 3rem;
 }
 
 .grid-content .news-content{
@@ -397,7 +399,7 @@ div .slider-vids li video .center:hover{
     transform: scaleX(1);
 }
 
-/*Modal, full screen news cards images*/
+/*#####################Modal, full screen news cards images#####################*/
 .modal{
     background-color: rgb(0, 0, 0, 0.8);
     position: fixed;
@@ -426,7 +428,7 @@ div .slider-vids li video .center:hover{
     justify-content: center;
     height: 80%;
     width: auto;
-    transform: scale(0.95);
+    transform: scale(0.9);
     transition: all 0.15s;
 }
 
@@ -443,6 +445,81 @@ div .slider-vids li video .center:hover{
     top:88%
 }
 
+/*############################ Weekly cards ############################*/
+
+.weekly-container{
+    width: 100%;
+    height: 600px;
+    min-height: fit-content;
+    display: flex;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.weekly-title{
+    width: 100%; 
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    padding-top: 3%;
+}
+
+.weekly-container .cards-container{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 15%;
+    justify-content: space-around;
+    padding-top: 4%;
+}
+
+.cards-container .weekly-cards{
+    height: 80%;
+    width: 25%;
+    position: relative;
+    overflow: hidden;/*modificate for the animation*/
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.cards-container img{
+    cursor: pointer;
+}
+
+/*information inside each weekly card, with his respective animation*/
+.weekly-cards .news-information{
+    padding: 2% 0 0 5%;
+    bottom:70%;
+    position: relative;
+    color: white;
+    z-index: 1;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(
+        hsl(0 0% 0%/0.2) 10%,
+        hsl(0 0% 0%/0.3) 20%,
+        hsl(0 0% 0%/1)    
+    );
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform:translateY(45%);
+    transition: transform 500ms ease;
+}
+
+.weekly-cards:hover .news-information{
+    transform:translateY(30%);
+    transition-delay: 500ms;
+}
+
+.weekly-cards:hover .card-tittle::after{
+    transform: scaleX(1);
+}
+
+
 /*
 .poring-world{
     margin-left: 5px;
@@ -451,9 +528,10 @@ div .slider-vids li video .center:hover{
     background-color: lawngreen;
 }
 
-/*---------------------------------------*/
+/*############################ Footer ############################*/
 
 footer{
+    position: absolute;
     display: flex;
     width: 100%;
     height: 100px;
@@ -462,9 +540,79 @@ footer{
     border-radius: 10px;
 }
 
-/*section for mobile*/
+
+footer .redes{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes ul{
+    display: flex;
+    text-decoration: none;
+}
+
+.media-items a{
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 25px;
+}
+
+.media-items a:hover{
+    color: #d53118;
+}
+
+
+/*##########################################################*/
+/*##################### Mobile section #####################*/
+/*##########################################################*/
+
+@media screen and (max-width:1200px){
+        /*##### Remove News-Card info animation #####*/
+        .news-items .news-information{
+            padding: 2% 0 0 5%;
+            bottom:40%;
+            position: relative;
+            color: white;
+            z-index: 1;
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(
+                hsl(0 0% 0%/0.2) 20%,
+                hsl(0 0% 0%/0.3) 20%,               
+            );
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transform:none;
+            transition: none;
+        }
+        
+        .news-items:hover .news-information{
+            transform:none;
+        }
+        
+        .card-tittle{
+            position: relative;
+            width: 100%;
+            bottom: 5%;
+        }
+        
+        /*Card tittle animation*/
+        .card-tittle::after{
+            content: none;
+        }
+        
+        .news-items:hover .card-tittle::after{
+            content: none;
+        }
+        
+}
+
 @media screen and (max-width:768px){
-    /* top menu*/
+    /*##### top menu #####*/
     .items-top-menu{
         width: 100%;
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -472,7 +620,7 @@ footer{
         background-color: #131419;
         display: flex;
         margin-left: auto;
-        justify-content:space-around;
+        justify-content: space-around;
         position: relative;
         overflow: visible;
     }
@@ -528,9 +676,15 @@ footer{
         letter-spacing: 1px; 
     }
 
-    /*principal videos*/
+    /*##### Principal menu #####*/
+    .principal-menu ul{
+        flex-wrap: wrap;
+    }
+
+    /*##### Principal videos #####*/
     .prototype-slider{
         height: 450px;
+        margin-top: 105px;
     }
     .slider-vids{
         top: 35%;
@@ -540,7 +694,7 @@ footer{
         height: 120px;
     }
 
-    /*Grid modifications for modible*/
+    /*##### Grid modifications for modible #####*/
     .grid-content .news-content{
         width: 100%;
         display: grid;
@@ -548,12 +702,63 @@ footer{
         grid-template-rows: repeat(auto-fit, 1fr);
     }
 
-    .news-content .news-items{
-        min-height: 150px;
-    }
-
     .news-content .news-items:nth-child(1){
         grid-column: 1/ span 2;
         grid-row: 1/ span 2;
     }
+
+    /*##### Remove News-Card info animation ##### ----------------------------------------------*/
+    .news-items .news-information{
+        bottom:55%;
+    }
+
+    
+    /*##### Modificate weekly cards position #####*/
+    .weekly-container .cards-container{
+        top: 10%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .cards-container .weekly-cards{
+        width: 100%;
+        height: 32%;
+        position: relative;
+        overflow: hidden;/*modificate for the animation*/
+        border-radius: 5px;
+        border-style: solid;
+    }
+
+    /*##### Remove Weekly-Card info animation #####*/
+    .weekly-cards .news-information{
+        padding: 2% 0 0 5%;
+        top:-190%;
+        position: relative;
+        color: white;
+        z-index: 1;
+        font-family: 'Times New Roman', Times, serif;
+        background: linear-gradient(
+            hsl(0 0% 0%/0.2) 10%,
+            hsl(0 0% 0%/0.3) 20%,
+            hsl(0 0% 0%/1)    
+        );
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transform:none;
+        transition: none;
+    }
+
+    .weekly-cards:hover .news-information{
+        transform:none;
+        transition-delay: none;
+    }
+
+    /*##### Foother #####*/
+    .media-items a{
+        font-size: 30px;
+    }
 }
+
+
+/*Repair news-cards for mobile*/
