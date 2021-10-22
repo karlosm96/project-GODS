@@ -8,6 +8,8 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="../img/ico/poring-png-1.ico" sizes="64x64" sizes="32x32">
     <link rel="STYLESHEET" href="contactosstyle_bootstrap.css">
     <title>Gods Contacto</title>
+
+    <script src="contacto.js"></script>
 </head>
 
 <body>
@@ -18,24 +20,24 @@
                     <h2 class="title">Contactanos</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form id="input-form" onsubmit="return validationInput()">
                         <div class="form-row">
                             <div class="name">Nick name</div>
-                            <div class="value" id="playerName">
-                                <input class="input--style-6" type="text" name="full_name">
+                            <div class="value">
+                                <input id="playerName" class="input--style-6" type="text" name="full_name">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Clase/ Job</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="job">
+                                <input id="clase" class="input--style-6" type="text" name="job">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="email">Correo Electronico</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                    <input id="email" class="input--style-6" type="email" name="email" placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -43,19 +45,19 @@
                             <div class="message">Realiza tu consulta</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message" placeholder="Message sent to the employer"></textarea>
+                                    <textarea id="message" class="textarea--style-6" name="message" placeholder="Message sent to the employer"></textarea>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-                    <div class="card-footer">
-                        <button class="btn btn--radius-2 btn--orange-2" disable id="submit" type="submit">Send</button>
-                        <div class="input-check">
-                            <label>Contactado ingame </label>
-                            <input class="check-box" type="checkbox" name="contacto_ingame"> 
+                        <div class="card-footer">
+                            <button id="input" class="btn btn--radius-2 btn--orange-2" type="submit">Send</button>
+                            <div class="input-check">
+                                <label>Contactado ingame </label>
+                                <input class="check-box" type="checkbox" name="contacto_ingame"> 
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                </div>  
             </div>
         </div>
     </div>
